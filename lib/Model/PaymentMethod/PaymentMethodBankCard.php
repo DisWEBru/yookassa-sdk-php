@@ -339,11 +339,11 @@ class PaymentMethodBankCard extends AbstractPaymentMethod
             throw new InvalidPropertyValueTypeException(
                 'Invalid source value type', 0, 'PaymentMethodBankCard.source', $value
             );
-        } elseif (!BankCardSource::valueExists($value)) {
-            throw new InvalidPropertyValueException(
-                'Invalid source value', 0, 'PaymentMethodBankCard.source', $value
-            );
-        }
+        } //elseif (!BankCardSource::valueExists($value)) {
+        //    throw new InvalidPropertyValueException(
+        //        'Invalid source value', 0, 'PaymentMethodBankCard.source', $value
+        //    );
+        //}
 
         $this->_source = (string)$value;
     }
